@@ -12,6 +12,8 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<link rel="stylesheet" href="lib/css/main.css">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -24,30 +26,236 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
 				<section>
-					Slide 2
+					<h2>Angular 2 vs. React</h2>
+					<img src="images/fight1.gif" alt="">
+				</section>
+
+				<section>
+					<h3>Phong Huynh</h3>
+					<img src="images/scribblelive.svg" alt="" width="250" style="margin-right:10px">
+					<img src="images/architech.png" alt="" width="250" style="margin-right:10px">
+					<img src="images/hubba.png" alt="" width="250" style="margin-right:10px">
+
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						<p>Previously companies worked at.</p>
+						<p>Mention technologies used.</p>
 					</aside>
 				</section>
+
 				<section>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<h3>Agenda</h3>
+					<ol>
+						<li>Legacy/Future</li>
+						<li>Comparisons</li>
+						<li>Live Demo</li>						
+					</ol>
+				</section>
 
-    var nodes = document.querySelectorAll( selector );
+				<section>
+					<h3>Legacy Front-End</h3>
+					<div class="left">
+						<img src="images/legacy.png" alt="" height="350">
+					</div>
+					<div class="right">
+						<ul>
+							<li>Hard to reuse across projects and teams</li>
+							<li>Coupled architecture</li>
+							<li>State issues</li>
+							<li>Difficult to debug</li>
+							<li>Eventually outdated</li>
+						</ul>
+					</div>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+					<aside class="notes">
+						<p>Problems with legacy front-end</p>
+						<p>Hard to reuse across projects and teams - Mention large Angular view-model controllers, 
+						duplication of components, architecture</p>
+						<p>State issues, debug - multiple controllers using multiple services, impure functions (hard to debug)</p>
+						<p>Outdated - mention community, meetups harder for us 
+						to learn and improve</p>
+					</aside>
+				</section>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
+				<section>
+					<img src="images/futureisnow.gif" alt="">
+
+					<aside class="notes">
+						The future is actually now. We are seeing more and more people migrate.
+						Example: Netflix, Twitter Mobile to React
+					</aside>
+				</section>
+
+				<section>
+					<h3>Present Front-End</h3>
+					<div class="left">
+						<img src="images/present.png" alt="" height="350">
+					</div>
+					<div class="right">
+						<ul>
+							<li>Re-use of components</li>
+							<li>Decoupled architecture</li>
+							<li>Uni-directional flow</li>
+							<li>New application architectures</li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						<p>Everything is built in components, allowing for re-use</p>
+						<p>Decoupled architecture - each component has its own HTML, CSS, JS</p>
+						<p>Uni-directional flow - no two-way binding which makes debugging easier because
+							it is easier to follow the flow of a function
+						</p>
+						<p>New application architectures - redux, has action dispatch to store then to view. RxJS</p>
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/futureyoda.gif" alt="">
+				</section>
+
+				<section>
+					<img src="images/longevity.jpg" alt="">
+
+					<aside class="notes">
+						Previous frameworks - you never know what might come next. 2017 Could be Angular 2 or Vue.js
+					</aside>
+				</section>
+
+				<section>
+					<h3>Why Angular and React</h3>
+					<img src="images/chart.png" alt="" height="400">
+
+					<aside class="notes">	
+						Taken from the stateofjs.com 2016 survey, thanks Adam. Angular and React are leading.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Overview</h3>
+					<div class="left">
+						<h3>Angular
+							<img src="images/angular.png" alt="" height="100" style="vertical-align: -40px">
+						</h3>
+						<p>JavaScript Framework</p>
+						<p>TypeScript</p>
+						<p>Final release in 2016</p>
+						<p>Google</p>
+					</div>
+					<div class="right">
+						<h3>React
+							<img src="images/react.png" alt="" height="100" style="vertical-align: -40px">
+						</h3>
+						<p>JavaScript library</p>
+						<p>JavaScript w/ JSX</p>
+						<p>Released in 2013</p>
+						<p>Facebook</p>
+					</div>
+
+					<aside class="notes">
+						<p>Getting into our comparisons...</p>
+						<p>Angular - complete rewrite of the first framework. Mostly focusing on TypeScript because of lack of ES support.
+							Released Beta mode in 2015, backed by Google
+						</p>
+						<p>React - JavaScript library for building user interface. View in MVC. Created by Facebook</p>
+					</aside>
+				</section>
+
+				<section>
+					<img src="images/facebookvsgoogle.gif" alt="">
+
+					<aside class="notes">
+						Kinda like Facebook vs Google
+					</aside>
+				</section>
+
+				<section>
+					<h3>Main Differences</h3>
+					<div class="left">
+						<img src="images/angular.png" alt="" height="100">						
+						<p>Framework</p>
+						<p>Steeper learning curve</p>
+						<p>Opionated</p>
+						<p>Growing community</p>
+					</div>
+					<div class="right">
+						<img src="images/react.png" alt="" height="100">
+						<p>Library</p>
+						<p>Easy to learn, difficult ecosystem</p>
+						<p>More autonomy</p>
+						<p>Active/strong community</p>
+					</div>
+
+					<aside class="notes">
+						<p>This is a large diference. Angular is a large framework, everything comes in the box. Whereas React itself is just a view library</p>
+						<p>Angular has a steeper learning curve because it comes with everything (router, forms, xhr tools, tests).
+							React is easy to learn, but the ecosystem is hard. Will have to find and evaluate separate modules for use with React (Redux, thunk middleware, react-router, xhr tool)</p>
+						<p>Similar to Angular 1, Angular 2 wants you to do things a certain way. Less freedom, but consistent codebase. React gives you more choice on modules and libraries you choose to use with it.</p>
+						<p>React has a stronger community because it has been around a bit longer. Referring to the chart before, React also has a lot more people who have used it, and would use it again compared to Angular, meaning it might have a better developer experience.
+							 Angular has a growing community, more people have been starting to use it. Azhar and I went to an Angular 2 meetup the other week, was very surprised at the amount of people.</p>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Code Differences</h3>
+					<div>
+						<img src="images/angular.png" alt="" height="50">
+					<pre><code data-trim>
+<ul>
+  <li *ngFor="let character of characters">
+    {{character.name}}
+  </li>
+</ul>
 					</code></pre>
+					</div>
+					<div>
+						<img src="images/react.png" alt="" height="50">
+					<pre><code data-trim>
+<ul>
+  { characters.map(character =>
+    <li key="{character.id}">{character.name}</li>
+  )}
+</ul>
+					</code></pre>
+					</div>
+
+					<aside class="notes">
+						<p>Angular 2, similar to Angular 1, has its own syntax inside HTML. Learning curve</p>
+						<p>React uses JSX to allow HTML inside JS. Simple .map, more intuitive</p>
+					</aside>
+				</section>
+
+				<section>
+					<h3>More Code Examples</h3>
+					<div>
+						<img src="images/angular.png" alt="" height="50">
+					<pre><code data-trim>
+(click)="handleSearch()"
+					</code></pre>
+					</div>
+					<div>
+						<img src="images/react.png" alt="" height="50">
+					<pre><code data-trim>
+onClick={this.handleSearch.bind(this)}
+					</code></pre>
+					</div>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h3>Live Demo</h3>
+					<img src="images/pills.gif" alt="">
+					
+					<aside class="notes">
+						Vote on whether to do Angular or React demo
+					</aside>
+				</section>
+
+				<section>
+					<h3>The End</h3>
+					<img src="images/end.gif" alt="">
 				</section>
 			</div>
 		</div>
