@@ -71,6 +71,7 @@
 						<p>Problems with legacy front-end</p>
 						<p>Hard to reuse across projects and teams - Mention large Angular view-model controllers, 
 						duplication of components, architecture</p>
+						<p>A tightly coupled architecture makes it harder to makes changes without affecting other parts.</p>
 						<p>State issues, debug - multiple controllers using multiple services, impure functions (hard to debug)</p>
 						<p>Outdated - mention community, meetups harder for us 
 						to learn and improve</p>
@@ -93,20 +94,22 @@
 					</div>
 					<div class="right">
 						<ul>
-							<li>Re-use of components</li>
+							<li>Re-use of components (DRY, SRP)</li>
 							<li>Decoupled architecture</li>
+							<li>Faster Development</li>
 							<li>Uni-directional flow</li>
 							<li>New application architectures</li>
 						</ul>
 					</div>
 
 					<aside class="notes">
-						<p>Everything is built in components, allowing for re-use</p>
-						<p>Decoupled architecture - each component has its own HTML, CSS, JS</p>
+						<p>Everything is built in components and self-container, allowing for re-use. Small components over big controllers. Don't Repeat Yourself, Single Responsibility Principle</p>
+						<p>Faster development - HMR, import components</p>
+						<p>Lousely coupled architecture - each component has its own HTML, CSS, JS. Easy to change, maintain, grow.</p>
 						<p>Uni-directional flow - no two-way binding which makes debugging easier because
 							it is easier to follow the flow of a function
 						</p>
-						<p>New application architectures - redux, has action dispatch to store then to view. RxJS</p>
+						<p>New application architectures - SCALABLE. redux, mobX has action dispatch to store then to view. RxJS</p>
 					</aside>
 				</section>
 
@@ -127,7 +130,9 @@
 					<img src="images/chart.png" alt="" height="400">
 
 					<aside class="notes">	
-						Taken from the stateofjs.com 2016 survey, thanks Adam. Angular and React are leading.
+						<p>Taken from the stateofjs.com 2016 survey, thanks Adam.</p>
+						<p>Angular and React are leading. Columns Heard of it, interested and used before, would use again.
+						Important to note, Angular 1 still still up there.</p>
 					</aside>
 				</section>
 
@@ -155,9 +160,9 @@
 					<aside class="notes">
 						<p>Getting into our comparisons...</p>
 						<p>Angular - complete rewrite of the first framework. Mostly focusing on TypeScript because of lack of ES support. Also Dart.
-							Released Beta mode in 2015, backed by Google
+							Released Beta mode in 2015, backed by Google. Google adwords.
 						</p>
-						<p>React - JavaScript library for building user interface. View in MVC. Created by Facebook</p>
+						<p>React - JavaScript library for building user interface. View in MVC. Created by Facebook. Instagram</p>
 					</aside>
 				</section>
 
@@ -194,7 +199,7 @@
 							Will have to find and evaluate separate modules for use with React (Redux, thunk middleware, react-router, xhr tool)</p>
 						<p>Similar to Angular 1, Angular 2 wants you to do things a certain way. 
 							Less freedom, but consistent codebase. React gives you more choice on modules and libraries you choose to use with it.</p>
-						<p>React has a stronger community because it has been arou nd a bit longer. 
+						<p>React has a stronger community because it has been around a bit longer. 
 							Referring to the chart before, React also has a lot more people who have used it, and would use it again compared to Angular.
 							Meaning it might have a better developer experience.
 							 Angular has a growing community, more people have been starting to use it. 
