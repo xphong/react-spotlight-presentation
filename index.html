@@ -40,6 +40,8 @@
 					<aside class="notes">
 						<p>Previously companies worked at.</p>
 						<p>Mention technologies used.</p>
+						<p>Architech: small to large size projects. Clients: SportChek, Nissan, D+H, MTO</p>
+						<p>Scribble: SaaS company. LiveBlogging (Live Feed) platform. Ex: Toronto Star, FIFA World Cup</p>
 					</aside>
 				</section>
 
@@ -69,10 +71,10 @@
 
 					<aside class="notes">
 						<p>Problems with legacy front-end</p>
-						<p>Hard to reuse across projects and teams - Mention large Angular view-model controllers, 
-						duplication of components, architecture</p>
-						<p>A tightly coupled architecture makes it harder to makes changes without affecting other parts.</p>
-						<p>State issues, debug - multiple controllers using multiple services, impure functions (hard to debug)</p>
+						<p>Hard to reuse across projects and teams - Mention large Angular view-model controllers with lots of mixed logic inside. 
+						Duplication of code when trying to re-use</p>
+						<p>A tightly coupled architecture. All of our logic is inside these controllers and we depend on large controllers to work. It makes it harder to makes changes without affecting other parts.</p>
+						<p>State issues, debug - multiple controllers using multiple services, two-way binding, impure functions (hard to debug)</p>
 						<p>Outdated - mention community, meetups harder for us 
 						to learn and improve</p>
 					</aside>
@@ -103,10 +105,10 @@
 					</div>
 
 					<aside class="notes">
-						<p>Everything is built in components and self-contained, allowing for re-use. Small components over big controllers. Don't Repeat Yourself, Single Responsibility Principle</p>
+						<p>Everything is built in components and self-contained, allowing for re-use. Small components over big controllers (legacy apps). Don't Repeat Yourself, Single Responsibility Principle</p>
 						<p>Lousely coupled architecture - each component has its own HTML, CSS, JS. Easy to change, maintain, grow.</p>
-						<p>Faster development - HMR, import components</p>						
-						<p>Uni-directional flow - no two-way binding which makes debugging easier because
+						<p>Faster development - HMR (explain HMR vs LiveReload, ex: working on a form), import components and modules</p>						
+						<p>Uni-directional flow - Two-way binding caused problems in scalable apps .no two-way binding which makes debugging easier because
 							it is easier to follow the flow of a function
 						</p>
 						<p>New application architectures - SCALABLE. redux, mobX has action dispatch to store then to view. Newer ways to manage state RxJS</p>
@@ -162,7 +164,7 @@
 						<p>Angular - complete rewrite of the first framework. Mostly focusing on TypeScript because of lack of ES support. Also Dart.
 							Released Beta mode in 2015, backed by Google. Google adwords.
 						</p>
-						<p>React - JavaScript library for building user interface. View in MVC. Created by Facebook. Instagram</p>
+						<p>React - JavaScript library for building user interface. View in MVC. Pure JavaScript with JSX, templating engine. Created by Facebook. Instagram</p>
 					</aside>
 				</section>
 
@@ -269,6 +271,10 @@ onClick={this.handleSearch.bind(this)}
 				<section>
 					<h3>And the winner of the JavaScript framework wars is... Angular.</h3>
 					<img src="images/winner.jpg" alt="">
+
+					<aside class="notes">
+						Twitter
+					</aside>
 				</section>
 
 				<section>
