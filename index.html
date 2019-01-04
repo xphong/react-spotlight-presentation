@@ -63,12 +63,16 @@
 					</div>
 					<div class="right">
 						<ul>
+							<li>Unit tests work well in isolation</li>
+							<li>Small group of units to test their behavior as a whole, verifying that they coherently work together</li>
 							<li>Testing the data layer with UI</li>
 						</ul>
 					</div>
 
 					<aside class="notes">
-						<p></p>
+						<p>
+							Unit tests do have one major disadvantage: even if the units work well in isolation, you do not know if they work well together. For that, you can use an integration test. An integration test takes a small group of units, often two units, and tests their behavior as a whole, verifying that they coherently work together.
+						</p>
 					</aside>
 				</section>
 
@@ -225,6 +229,31 @@ interface Person {
 							ex: last 2 browser versions, >2% of browser users
 						</p>
 					</aside>
+				</section>
+
+				<section>
+					<h3>Tree Shaking</h3>
+
+					<aside class="notes">
+						<p>
+							Tree shaking or dead code elimination means that unused modules will not be included in the bundle during the build process.
+						</p>
+						<p>
+							Utilizing the tree shaking and dead code elimination can significantly reduce the code size we have in our application. The less code we send over the wire the more performant the application will be.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<div>
+						<img src="images/treeshake1.png" />
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<img src="images/treeshake2.png" />
+					</div>
 				</section>
 
 				<section>
