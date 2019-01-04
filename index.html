@@ -95,9 +95,9 @@
 				<section>
 					<h3>Interfaces</h3>
 					<pre><code data-trim>
-interface Teacher {
+interface Person {
   name: string;
-  courses: string[];
+  hobbies: string[];
 }
 					</code></pre>
 
@@ -107,41 +107,58 @@ interface Teacher {
 				</section>
 
 				<section>
-					<h3>Overview</h3>
-					<div class="left">
-						<h3>Angular
-							<img src="images/angular.png" alt="" height="100" style="vertical-align: -40px">
-						</h3>
-						<p>JavaScript Framework</p>
-						<p>TypeScript</p>
-						<p>Final release in 2016</p>
-						<p>Google</p>
-					</div>
-					<div class="right">
-						<h3>React
-							<img src="images/react.png" alt="" height="100" style="vertical-align: -40px">
-						</h3>
-						<p>JavaScript library</p>
-						<p>JavaScript w/ JSX</p>
-						<p>Released in 2013</p>
-						<p>Facebook</p>
-					</div>
-
-					<aside class="notes">
-						<p>Getting into our comparisons...</p>
-						<p>Angular - complete rewrite of the first framework. Mostly focusing on TypeScript because of lack of ES support. Also Dart.
-							Released Beta mode in 2015, backed by Google. Google adwords.
-						</p>
-						<p>React - JavaScript library for building user interface. View in MVC. Pure JavaScript with JSX, templating engine. Created by Facebook. Instagram</p>
-					</aside>
+					<pre><code data-trim>
+  const teachers: Teacher[] = [
+    {
+      name: 'Ryan',
+      courses: ['Reading', 'Writing']
+    },
+    {
+      name: 'Simon',
+      courses: ['Basketball', 'Gym']
+    },{
+      name: 'Jordan',
+      courses: ['Music', 'Art']
+    }
+  ];
+					</code></pre>
 				</section>
 
 				<section>
-					<img src="images/fight2.gif" alt="">
+					<h3>React PropTypes</h3>
+					<pre><code data-trim>
+  EventItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    capacity: PropTypes.number.isRequired,
+    date: PropTypes.Date.isRequired
+  }
 
-					<aside class="notes">
+  function EventItem(props) (
+    <div>
+      <h2>{props.title}</h2>
+      ...
+    </div>
+  );
+					</code></pre>
+				</section>
 
-					</aside>
+
+				<section>
+					<h3>React PropTypes in TypeScript</h3>
+					<pre><code data-trim>
+  interface Props {
+    title: string;
+    capacity: number;
+    date: Date;
+  }
+
+  function EventItem(props: Props) (
+    <div>
+      <h2>{props.title}</h2>
+      ...
+    </div>
+  );
+						</code></pre>
 				</section>
 
 				<section>
