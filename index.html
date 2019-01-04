@@ -7,7 +7,7 @@
 		<title>Angular vs React</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -33,36 +33,23 @@
 				<section>
 					<h3>Agenda</h3>
 					<ol>
-						<li>Legacy/Future</li>
-						<li>Comparisons</li>
-						<li>Live Demo</li>
+						<li>Component Testing</li>
+						<li>React && TypeScript</li>
+						<li>Gatsby, React, and GraphQL</li>
+						<li>The Delicate Power of Webpack and Babel</li>
 					</ol>
 				</section>
 
 				<section>
-					<h3>Legacy Front-End</h3>
-					<div class="left">
-						<img src="images/legacy.png" alt="" height="350">
-					</div>
-					<div class="right">
+					<h3>Component Testing</h3>
+					<div>
 						<ul>
-							<li>Hard to reuse across projects and teams</li>
-							<li>Coupled architecture</li>
-							<li>State issues</li>
-							<li>Difficult to debug</li>
-							<li>Eventually outdated</li>
+							<li>Systems are too coupled to be effectively unit tested</li>
+							<li>Integration test: data layer with UI</li>
+							<li>Focus on behaviour (transforming data example)</li>
+							<li>Avoid testing functions that call other functions</li>
 						</ul>
 					</div>
-
-					<aside class="notes">
-						<p>Problems with legacy front-end</p>
-						<p>Hard to reuse across projects and teams - Mention large Angular view-model controllers with lots of mixed logic inside.
-						Duplication of code when trying to re-use</p>
-						<p>A tightly coupled architecture. All of our logic is inside these controllers and we depend on large controllers to work. It makes it harder to makes changes without affecting other parts.</p>
-						<p>State issues, debug - multiple controllers using multiple services, no single source of truth, two-way binding, impure functions (hard to debug)</p>
-						<p>Outdated - mention community, meetups harder for us
-						to learn and improve</p>
-					</aside>
 				</section>
 
 				<section>
