@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Angular vs React</title>
+		<title>React Spotlight</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -37,6 +37,7 @@
 						<li>React && TypeScript</li>
 						<li>Gatsby, React, and GraphQL</li>
 						<li>The Delicate Power of Webpack and Babel</li>
+						<li>Component Library</li>
 					</ol>
 				</section>
 
@@ -50,63 +51,58 @@
 							<li>Avoid testing functions that call other functions</li>
 						</ul>
 					</div>
-				</section>
-
-				<section>
-					<img src="images/futureisnow.gif" alt="">
 
 					<aside class="notes">
-						The future is actually now. We are seeing more and more people migrate.
-						Example: Netflix, Twitter Mobile to React
+						<p></p>
 					</aside>
 				</section>
 
 				<section>
-					<h3>Present Front-End</h3>
+					<h3>React && TypeScript</h3>
 					<div class="left">
-						<img src="images/present.png" alt="" height="350">
+						<img src="images/typescript.jpg" alt="" height="350">
 					</div>
 					<div class="right">
 						<ul>
-							<li>Re-use of components (DRY, SRP)</li>
-							<li>Decoupled architecture</li>
-							<li>Faster Development</li>
-							<li>Uni-directional flow</li>
-							<li>New application architectures</li>
+							<li>Less errors due to type checking</li>
+							<li>Catch errors early in editor</li>
+							<li>Provides clearer vision</li>
 						</ul>
 					</div>
 
 					<aside class="notes">
-						<p>Everything is built in components and self-contained, allowing for re-use. Small components over big controllers (legacy apps). Don't Repeat Yourself, Single Responsibility Principle</p>
-						<p>Lousely coupled architecture - each component has its own HTML, CSS, JS. Easy to change, maintain, grow.</p>
-						<p>Faster development - HMR (explain HMR vs LiveReload, ex: working on a form), import components and modules</p>
-						<p>Uni-directional flow - Two-way binding caused problems in scalable apps .no two-way binding which makes debugging easier because
-							it is easier to follow the flow of a function
-						</p>
-						<p>New application architectures - SCALABLE. redux, mobX has action dispatch to store then to view. Newer ways to manage state RxJS</p>
+						<p>The main purpose of a statically type language is to assign a type to everything you work with. The hope being you will catch bugs early and often, reducing headaches later.</p>
 					</aside>
 				</section>
 
 				<section>
-					<img src="images/futureyoda.gif" alt="">
+					<h3>Fully Annotated TypeScript</h3>
+					<pre><code data-trim>
+  function add(a: number, b: number) : number {
+    return a + b;
+  }
+					</code></pre>
 				</section>
 
 				<section>
-					<img src="images/longevity.jpg" alt="">
+					<img src="images/typescript-function-output.png" alt="">
 
 					<aside class="notes">
-						Previous frameworks - you never know what might come next. 2017 Could be Angular 2 or Vue.js
+						Catch errors early on in editor
 					</aside>
 				</section>
 
 				<section>
-					<h3>Why Angular and React</h3>
-					<img src="images/chart.png" alt="" height="400">
+					<h3>Interfaces</h3>
+					<pre><code data-trim>
+interface Teacher {
+  name: string;
+  courses: string[];
+}
+					</code></pre>
 
 					<aside class="notes">
-						<p>Taken from the stateofjs.com 2016 survey, thanks Adam.</p>
-						<p>Angular and React are leading. Columns Heard of it, interested and used before, would use again.
-						Important to note, Angular 1 still still up there.</p>
+						When you are writing your applications you are not going to be just using simple values.
 					</aside>
 				</section>
 
