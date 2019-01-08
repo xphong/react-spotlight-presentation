@@ -45,9 +45,9 @@
 					<h3>Component Testing</h3>
 					<div>
 						<ul>
-							<li>Systems are too coupled to be effectively unit tested</li>
-							<li>Focus on behaviour (transforming data example)</li>
-							<li>Avoid testing functions that call other functions</li>
+							<li>Systems are too coupled to be effectively unit tested (Integration Tests)</li>
+							<li>Focus on behaviour</li>
+							<li>Avoid testing third party library functions</li>
 						</ul>
 					</div>
 
@@ -72,6 +72,54 @@
 					<aside class="notes">
 						<p>
 							Unit tests do have one major disadvantage: even if the units work well in isolation, you do not know if they work well together. For that, you can use an integration test. An integration test takes a small group of units, often two units, and tests their behavior as a whole, verifying that they coherently work together.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Focus on Behaviour</h3>
+					<div>
+						<pre><code data-trim>
+  updateUser = (body) => {
+    const { user, updateUser } = this.props
+
+    const newUser = {
+      ...user,
+      ...body
+    }
+
+    return updateUser(newUser)
+      .then(() => {
+        this.setState({ fetching: false})
+      })
+  }
+					</code></pre>
+					</div>
+
+					<aside class="notes">
+						<p>
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Focus on Behaviour</h3>
+					<div>
+						<pre><code data-trim>
+	it('should call updateUser with first name updated', () => {
+	  const expectedUser = {
+		  firstName: 'Howdy',
+		  lastName: 'Partner'
+	  }
+
+	  wrapper.instance().updateUser({ firstName: 'Howdy' })
+	  expect(wrapper.instance().props.updateUser).toHaveBeenCalledWith(expectedUser)
+	})
+					</code></pre>
+					</div>
+
+					<aside class="notes">
+						<p>
 						</p>
 					</aside>
 				</section>
