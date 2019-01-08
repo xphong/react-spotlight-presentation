@@ -52,7 +52,9 @@
 					</div>
 
 					<aside class="notes">
-						<p></p>
+						<p>
+							Don't test React component did mount, React most likely has tests around this. Especially if mount calls another function
+						</p>
 					</aside>
 				</section>
 
@@ -77,7 +79,7 @@
 				</section>
 
 				<section>
-					<h3>Focus on Behaviour</h3>
+					<h3>Integration Test</h3>
 					<div>
 						<pre><code data-trim>
   updateUser = (body) => {
@@ -103,7 +105,7 @@
 				</section>
 
 				<section>
-					<h3>Focus on Behaviour</h3>
+					<h3>Integration Test</h3>
 					<div>
 						<pre><code data-trim>
 	it('should call updateUser with first name updated', () => {
@@ -115,6 +117,59 @@
 	  wrapper.instance().updateUser({ firstName: 'Howdy' })
 	  expect(wrapper.instance().props.updateUser).toHaveBeenCalledWith(expectedUser)
 	})
+					</code></pre>
+					</div>
+
+					<aside class="notes">
+						<p>
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Focus on Behaviour</h3>
+					<div>
+						<pre><code data-trim>
+export const searchFromList = (searchKey, list) => {
+  const matchName = (item, searchKey) => {
+    const actualText = _.isString(item) ? item.toLowerCase() : item.name.toLowerCase()
+    const searchText = searchKey.toLowerCase()
+    return actualText.includes(searchText)
+  }
+
+  const matchTag = (item, searchKey) => {
+    return !_.isString(item) && item.tags && item.tags.filter((tag) => matchName(tag, searchKey)).length
+  }
+
+  return searchKey.length ? _.filter(list, (item) => matchName(item, searchKey) || matchTag(item, searchKey)) : list
+}
+
+					</code></pre>
+					</div>
+
+					<aside class="notes">
+						<p>
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Focus on Behaviour</h3>
+					<div>
+						<pre><code data-trim>
+
+describe('searchFromList', () => {
+  const canada = { name: 'Canada', tags: ['earth', 'northAmerica'] }
+  const usa = { name: 'USA', tags: ['earth', 'northAmerica'] }
+  const mexico = { name: 'Mexico', tags: ['earth', 'northAmerica'] }
+  const messagingList = [canada, usa, mexico]
+
+  it('match name with search key', () => {
+    expect(searchFromList('can', messagingList)).toEqual([canada])
+    expect(searchFromList('uSa', messagingList)).toEqual([usa])
+  })
+})
+
 					</code></pre>
 					</div>
 
